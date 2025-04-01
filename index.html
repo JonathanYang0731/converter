@@ -49,19 +49,19 @@
         <h1>awa伺服器匯率轉換器</h1>
         <label for="fromCurrency">貨幣1：</label>
         <select id="fromCurrency">
-            <option value="copper">銅錠</option>
             <option value="iron">鐵錠</option>
             <option value="gold">金錠</option>
             <option value="coal">煤礦</option>
+            <option value="copper">銅錠</option>
             <option value="emerald">綠寶石</option>
         </select>
 
         <label for="toCurrency">貨幣2：</label>
         <select id="toCurrency">
-            <option value="copper">銅錠</option>
             <option value="iron">鐵錠</option>
             <option value="gold">金錠</option>
             <option value="coal">煤礦</option>
+            <option value="copper">銅錠</option>
             <option value="emerald">綠寶石</option>
         </select>
 
@@ -74,11 +74,11 @@
 
     <script>
         const rates = {
-            copper: 1,
-            iron: 3,
-            gold: 6,
-            coal: 13,
-            emerald: 18
+            iron: 1 / 6,
+            gold: 1 / 3,
+            coal: 1 / 13,
+            copper: 1 / 18,
+            emerald: 1
         };
 
         function convertCurrency() {
@@ -107,10 +107,10 @@
 
         function getCurrencyName(currency) {
             const names = {
-                copper: '銅錠',
                 iron: '鐵錠',
                 gold: '金錠',
                 coal: '煤礦',
+                copper: '銅錠',
                 emerald: '綠寶石'
             };
             return names[currency];
